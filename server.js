@@ -18,6 +18,11 @@ const dbo = require("./db/conn");
 //   console.log(`Server is running on port: ${port}`);
 // });
 
+// middleware
+const notFoundMiddleware = require('./middleware/not-found');
+
+app.use(notFoundMiddleware);
+
 const start = async () => {
   try {
     // await connectDB(process.env.MONGO_URL);
