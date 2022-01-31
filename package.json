@@ -1,0 +1,12 @@
+{
+  "name": "mern-mongo",
+  "version": "1.0.0",
+  "description": "mern mongo node for initial learn",
+  "main": "index.js",
+  "repository": "https://github.com/jinkyaw/mern-mongo.git",
+  "author": "Ajinkya Wankhade <ajinkyawankhade90@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "cd server && node server.js"
+  }
+}
