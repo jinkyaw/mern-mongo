@@ -9,11 +9,28 @@ app.use(require("./routes/record"));
 // get driver connection
 const dbo = require("./db/conn");
  
-app.listen(port, () => {
-  // perform a database connection when server starts
-  dbo.connectToServer(function (err) {
-    if (err) console.error(err);
+// app.listen(port, () => {
+//   // perform a database connection when server starts
+//   dbo.connectToServer(function (err) {
+//     if (err) console.error(err);
  
-  });
-  console.log(`Server is running on port: ${port}`);
-});
+//   });
+//   console.log(`Server is running on port: ${port}`);
+// });
+
+const start = async () => {
+  try {
+    // await connectDB(process.env.MONGO_URL);
+    app.listen(port, () =>{
+      dbo.connectToServer(function (err) {
+        if (err) console.error(err);
+      })
+
+      console.log(`Server is listening on port ${port}...`)
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+start();
