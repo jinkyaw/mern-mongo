@@ -1,12 +1,18 @@
 {
-  "name": "mern-mongo",
+  "name": "server",
   "version": "1.0.0",
-  "description": "mern mongo node for initial learn",
   "main": "index.js",
-  "repository": "https://github.com/jinkyaw/mern-mongo.git",
-  "author": "Ajinkya Wankhade <ajinkyawankhade90@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "cd server && node server.js"
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2",
+    "mongodb": "^4.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
